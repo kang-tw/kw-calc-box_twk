@@ -26,3 +26,31 @@ test("Wrong command", () => {
         expect(output).toBe("Wrong command!");
     });
 });
+
+
+test("Wrong command", () => {
+    const main = spawn("node", ["main.js", "prim", "1"]);
+    const outputs = [];
+    main.stdout.on("data", (output) => {
+        outputs.push(output);
+    });
+
+    main.stdout.on("end", () => {
+        const output = outputs.join("").trim();
+        expect(output).toBe("Wrong command!");
+    });
+});
+
+
+test("Wrong command", () => {
+    const main = spawn("node", ["main.js", "fac", "1"]);
+    const outputs = [];
+    main.stdout.on("data", (output) => {
+        outputs.push(output);
+    });
+
+    main.stdout.on("end", () => {
+        const output = outputs.join("").trim();
+        expect(output).toBe("Wrong command!");
+    });
+});

@@ -10,14 +10,20 @@ function avg(numbers){
 }
 
 function prime(numbers){
-    return false;
+    let denominator = numbers-1;
+    while(denominator!== 1){
+        if(numbers % denominator==0) return false;
+        denominator--;
+    }
+
+    return true;
 }
 
 
 function fact(numbers){
+    if(numbers === 1) return 1;
 
-
-    return -1;
+    return numbers*fact(numbers-1);
 }
 
 
