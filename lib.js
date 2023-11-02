@@ -11,6 +11,7 @@ function avg(numbers){
 
 function prime(numbers){
     let denominator = numbers-1;
+    if(numbers<0) return false;
     while(denominator!== 1){
         if(numbers % denominator==0) return false;
         denominator--;

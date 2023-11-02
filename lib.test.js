@@ -52,3 +52,10 @@ test("prime 19 should be true",()=>{
 
 
 });
+
+
+test("prime -1 should be true",()=>{
+    expect(lib.prime(-1)).toBe(false);
+
+
+});
